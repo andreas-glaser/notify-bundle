@@ -1,0 +1,18 @@
+parameters:
+  andreas_glaser.notify.channel.sms.dispatcher.class: AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher\Dummy
+  andreas_glaser.notify.channel.email.loader.class: AndreasGlaser\NotifyBundle\Channel\Email\Loader\Config
+  andreas_glaser.notify.channel.email.dispatcher.class: AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher\Symfony
+
+services:
+
+    andreas_glaser.notify.channel.email.loader:
+      class: %andreas_glaser.notify.channel.email.loader.class%
+      arguments: [@service_container]
+
+    andreas_glaser.notify.channel.email.dispatcher:
+      class: %andreas_glaser.notify.channel.email.dispatcher.class%
+      arguments: [@service_container]
+
+    andreas_glaser.notify.channel.sms.dispatcher:
+      class: %andreas_glaser.notify.channel.sms.dispatcher.class%
+      arguments: [@service_container, @logger]

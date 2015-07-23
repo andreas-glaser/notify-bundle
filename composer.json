@@ -1,0 +1,24 @@
+{
+  "name": "andreas-glaser/notify-bundle",
+  "type": "symfony-bundle",
+  "description": "A symfony 2 bundle, helping you to send email, sms and other notifications.",
+  "homepage": "https://github.com/andreas-glaser/notify-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreas Glaser",
+      "email": "andreas.c.glaser@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {"AndreasGlaser\\NotifyBundle": ""}
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.x-dev"
+    }
+  }
+}
