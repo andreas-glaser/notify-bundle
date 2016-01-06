@@ -6,7 +6,6 @@ namespace AndreasGlaser\NotifyBundle\Channel\SMS;
  * Class ShortMessage
  *
  * @package AndreasGlaser\NotifyBundle\Channel\SMS
- *
  * @author  Andreas Glaser
  */
 class ShortMessage implements ShortMessageInterface
@@ -26,6 +25,14 @@ class ShortMessage implements ShortMessageInterface
      */
     protected $senderPhoneNumber;
 
+    /**
+     * ShortMessage constructor.
+     *
+     * @param null $phoneNumber
+     * @param null $text
+     *
+     * @author Andreas Glaser
+     */
     public function __construct($phoneNumber = null, $text = null)
     {
         $this->setRecipientNumber($phoneNumber);
@@ -37,6 +44,7 @@ class ShortMessage implements ShortMessageInterface
      *
      * @param null $phoneNumber
      * @param null $text
+     *
      * @return ShortMessage
      *
      * @author Andreas Glaser

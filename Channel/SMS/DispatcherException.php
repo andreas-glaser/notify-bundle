@@ -6,14 +6,13 @@ namespace AndreasGlaser\NotifyBundle\Channel\SMS;
  * Class DispatcherException
  *
  * @package AndreasGlaser\NotifyBundle\Channel\SMS
- *
  * @author  Andreas Glaser
  */
 class DispatcherException extends \RuntimeException
 {
+
     /**
-     * @return DispatcherException
-     *
+     * @return \AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException
      * @author Andreas Glaser
      */
     public static function missingPhoneNumber()
@@ -22,8 +21,7 @@ class DispatcherException extends \RuntimeException
     }
 
     /**
-     * @return DispatcherException
-     *
+     * @return \AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException
      * @author Andreas Glaser
      */
     public static function missingPhoneNumberInvalid()
@@ -32,8 +30,7 @@ class DispatcherException extends \RuntimeException
     }
 
     /**
-     * @return DispatcherException
-     *
+     * @return \AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException
      * @author Andreas Glaser
      */
     public static function notDispatched()

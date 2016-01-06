@@ -2,25 +2,19 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher;
 
-use AndreasGlaser\NotifyBundle\Channel\Email\EmailInterface;
 use AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher;
-use AndreasGlaser\NotifyBundle\Channel\Email\DispatcherException;
+use AndreasGlaser\NotifyBundle\Channel\Email\EmailInterface;
 
 /**
  * Class BlackHole
  *
  * @package AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher
- *
  * @author  Andreas Glaser
  */
 class BlackHole extends Dispatcher
 {
     /**
-     * @param \AndreasGlaser\NotifyBundle\Channel\Email\EmailInterface $email
-     *
-     * @author Andreas Glaser
-     *
-     * @return mixed|void
+     * @inheritdoc
      */
     public function dispatch(EmailInterface $email = null)
     {

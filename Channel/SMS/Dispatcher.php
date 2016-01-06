@@ -2,17 +2,14 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\SMS;
 
-use AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherInterface;
-use AndreasGlaser\NotifyBundle\Channel\SMS\ShortMessageInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 
 /**
- * Class Dummy
+ * Class Dispatcher
  *
- * @package AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher
- *
+ * @package AndreasGlaser\NotifyBundle\Channel\SMS
  * @author  Andreas Glaser
  */
 class Dispatcher extends ContainerAware implements DispatcherInterface
@@ -31,6 +28,14 @@ class Dispatcher extends ContainerAware implements DispatcherInterface
      */
     protected $shortMessage;
 
+    /**
+     * Dispatcher constructor.
+     *
+     * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+     * @param \Symfony\Component\HttpKernel\Log\LoggerInterface         $logger
+     *
+     * @author Andreas Glaser
+     */
     public function __construct(ContainerInterface $container, LoggerInterface $logger)
     {
         $this->setContainer($container);
@@ -38,9 +43,7 @@ class Dispatcher extends ContainerAware implements DispatcherInterface
     }
 
     /**
-     * @param ShortMessageInterface $shortMessage
-     *
-     * @author Andreas Glaser
+     * @inheritdoc
      */
     public function setShortMessage(ShortMessageInterface $shortMessage)
     {
@@ -48,9 +51,7 @@ class Dispatcher extends ContainerAware implements DispatcherInterface
     }
 
     /**
-     * @throws \RuntimeException
-     *
-     * @author Andreas Glaser
+     * @inheritdoc
      */
     public function dispatch()
     {

@@ -9,20 +9,21 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Class Dispatcher
  *
  * @package AndreasGlaser\NotifyBundle\Channel\Email
- *
  * @author  Andreas Glaser
  */
 class Dispatcher extends ContainerAware implements DispatcherInterface
 {
     /**
      * @var EmailInterface
-     *
-     * @author Andreas Glaser
      */
     protected $email;
 
     /**
-     * @param ContainerInterface $container
+     * Dispatcher constructor.
+     *
+     * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+     *
+     * @author Andreas Glaser
      */
     public function __construct(ContainerInterface $container)
     {
@@ -30,10 +31,7 @@ class Dispatcher extends ContainerAware implements DispatcherInterface
     }
 
     /**
-     * @param EmailInterface $email
-     * @return $this
-     *
-     * @author Andreas Glaser
+     * @inheritdoc
      */
     public function setEmail(EmailInterface $email)
     {
@@ -43,10 +41,7 @@ class Dispatcher extends ContainerAware implements DispatcherInterface
     }
 
     /**
-     * @param EmailInterface $email
-     * @throws DispatcherException
-     *
-     * @author Andreas Glaser
+     * @inheritdoc
      */
     public function dispatch(EmailInterface $email = null)
     {

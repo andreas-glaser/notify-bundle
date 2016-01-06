@@ -2,27 +2,21 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher;
 
-use AndreasGlaser\NotifyBundle\Channel\Email\EmailInterface;
 use AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher;
 use AndreasGlaser\NotifyBundle\Channel\Email\DispatcherException;
+use AndreasGlaser\NotifyBundle\Channel\Email\EmailInterface;
 use Swift_Message;
 
 /**
  * Class Symfony
  *
  * @package AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher
- *
  * @author  Andreas Glaser
  */
 class Symfony extends Dispatcher
 {
     /**
-     * @param EmailInterface $email
-     *
-     * @return mixed|void
-     * @throws \AndreasGlaser\NotifyBundle\Channel\Email\DispatcherException
-     *
-     * @author Andreas Glaser
+     * @inheritdoc
      */
     public function dispatch(EmailInterface $email = null)
     {
@@ -34,7 +28,7 @@ class Symfony extends Dispatcher
             throw new DispatcherException('Email not set');
         }
 
-        $from = $this->email->getForm();
+        $from = $this->email->getFrom();
 
         // build email
         $message = Swift_Message::newInstance()

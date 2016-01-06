@@ -2,10 +2,8 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher;
 
-use AndreasGlaser\NotifyBundle\Channel\SMS\ShortMessageInterface;
-use AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException;
 use AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher;
-use Symfony\Component\HttpFoundation\Request;
+use AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException;
 
 /**
  * Class NeonSMS
@@ -57,7 +55,7 @@ class NeonSMS extends Dispatcher
             'clipwd' => $parameters['channels']['sms']['dispatchers']['neon_sms']['clipwd'],
             'text'   => $this->shortMessage->getText(),
             'to'     => $recipientPhoneNumber,
-            'form'   => $senderPhoneNumber
+            'from'   => $senderPhoneNumber,
         ];
 
         // send HTTP request

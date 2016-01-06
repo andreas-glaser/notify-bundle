@@ -2,15 +2,14 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\Email\Loader;
 
+use AndreasGlaser\NotifyBundle\Channel\Email\Email;
 use AndreasGlaser\NotifyBundle\Channel\Email\Loader;
 use AndreasGlaser\NotifyBundle\Channel\Email\LoaderException;
-use AndreasGlaser\NotifyBundle\Channel\Email\Email;
 
 /**
  * Class Config
  *
  * @package AndreasGlaser\NotifyBundle\Channel\Email\Loader
- *
  * @author  Andreas Glaser
  */
 class Config extends Loader
@@ -52,7 +51,7 @@ class Config extends Loader
             '_template_layout' => $templateLayout,
             '_subject'         => $subject,
             '_from_name'       => $fromName,
-            '_from_email'      => $fromEmail
+            '_from_email'      => $fromEmail,
         ];
 
         $email = new Email();

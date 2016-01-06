@@ -2,23 +2,20 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher;
 
-use AndreasGlaser\NotifyBundle\Channel\SMS\ShortMessageInterface;
-use AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException;
 use AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher;
+use AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException;
 
 /**
  * Class Dummy
  *
  * @package AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher
- *
  * @author  Andreas Glaser
  */
 class Dummy extends Dispatcher
 {
+
     /**
-     * @throws \AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException
-     *
-     * @author Andreas Glaser
+     * @inheritdoc
      */
     public function dispatch()
     {

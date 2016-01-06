@@ -2,14 +2,13 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher;
 
-use AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException;
 use AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher;
+use AndreasGlaser\NotifyBundle\Channel\SMS\DispatcherException;
 
 /**
  * Class SMSToEmail
  *
  * @package AndreasGlaser\NotifyBundle\Channel\SMS\Dispatcher
- *
  * @author  Andreas Glaser
  */
 class SMSToEmail extends Dispatcher
@@ -19,6 +18,12 @@ class SMSToEmail extends Dispatcher
      */
     protected $email;
 
+    /**
+     * @param $email
+     *
+     * @return $this
+     * @author Andreas Glaser
+     */
     public function setEmail($email)
     {
         $this->email = $email;
@@ -26,6 +31,10 @@ class SMSToEmail extends Dispatcher
         return $this;
     }
 
+    /**
+     * @return string
+     * @author Andreas Glaser
+     */
     public function getEmail()
     {
         return $this->email;

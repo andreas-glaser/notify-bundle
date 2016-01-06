@@ -11,7 +11,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  * Class AndreasGlaserNotifyExtension
  *
  * @package AndreasGlaser\NotifyBundle\DependencyInjection
- *
  * @author  Andreas Glaser
  */
 class AndreasGlaserNotifyExtension extends Extension

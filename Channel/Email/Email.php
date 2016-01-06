@@ -6,23 +6,43 @@ namespace AndreasGlaser\NotifyBundle\Channel\Email;
  * Class Email
  *
  * @package AndreasGlaser\NotifyBundle\Channel\Email
- *
  * @author  Andreas Glaser
  */
 class Email implements EmailInterface
 {
+    /**
+     * @var string
+     */
     protected $subject;
 
+    /**
+     * @var string
+     */
     protected $body;
 
+    /**
+     * @var array
+     */
     protected $from = [];
 
+    /**
+     * @var array
+     */
     protected $tos = [];
 
+    /**
+     * @var array
+     */
     protected $ccs = [];
 
+    /**
+     * @var array
+     */
     protected $bccs = [];
 
+    /**
+     * @var array
+     */
     protected $attachments = [];
 
     /**
@@ -94,7 +114,7 @@ class Email implements EmailInterface
      *
      * @author Andreas Glaser
      */
-    public function getForm()
+    public function getFrom()
     {
         return $this->from;
     }

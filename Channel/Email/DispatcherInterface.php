@@ -13,6 +13,7 @@ interface DispatcherInterface
 {
     /**
      * @param EmailInterface $email
+     *
      * @return mixed
      *
      * @author Andreas Glaser
@@ -21,6 +22,7 @@ interface DispatcherInterface
 
     /**
      * @param EmailInterface $email
+     *
      * @return mixed
      *
      * @author Andreas Glaser
