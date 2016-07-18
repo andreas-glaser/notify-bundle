@@ -2,7 +2,7 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\Email;
 
-use Symfony\Component\DependencyInjection\ContainerAware;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -11,8 +11,10 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @package AndreasGlaser\NotifyBundle\Channel\Email
  * @author  Andreas Glaser
  */
-class Dispatcher extends ContainerAware implements DispatcherInterface
+abstract class Dispatcher implements DispatcherInterface
 {
+    use ContainerAwareTrait;
+
     /**
      * @var EmailInterface
      */
@@ -45,6 +47,18 @@ class Dispatcher extends ContainerAware implements DispatcherInterface
      */
     public function dispatch(EmailInterface $email = null)
     {
-        throw new DispatcherException('This method has to be overwritten as this is only a base class.');
+        if ($email) {
+            $this->setEmail($email);
+        }
+
+        return $this->doDispatch();
     }
+
+    /**
+     * Dispatches email.
+     *
+     * @return mixed
+     * @author Andreas Glaser
+     */
+    abstract protected function doDispatch();
 }

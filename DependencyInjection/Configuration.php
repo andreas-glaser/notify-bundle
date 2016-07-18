@@ -9,7 +9,6 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  * Class Configuration
  *
  * @package AndreasGlaser\NotifyBundle\DependencyInjection
- *
  * @author  Andreas Glaser
  */
 class Configuration implements ConfigurationInterface

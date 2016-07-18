@@ -3,7 +3,6 @@
 namespace AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher;
 
 use AndreasGlaser\NotifyBundle\Channel\Email\Dispatcher;
-use AndreasGlaser\NotifyBundle\Channel\Email\EmailInterface;
 
 /**
  * Class BlackHole
@@ -16,7 +15,7 @@ class BlackHole extends Dispatcher
     /**
      * @inheritdoc
      */
-    public function dispatch(EmailInterface $email = null)
+    protected function doDispatch()
     {
         // not much to do here ;)
     }

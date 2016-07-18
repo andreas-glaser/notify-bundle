@@ -2,7 +2,7 @@
 
 namespace AndreasGlaser\NotifyBundle\Channel\Email;
 
-use Symfony\Component\DependencyInjection\ContainerAware;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -11,8 +11,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @package AndreasGlaser\NotifyBundle\Channel\Email
  * @author  Andreas Glaser
  */
-class Loader extends ContainerAware implements LoaderInterface
+class Loader implements LoaderInterface
 {
+    use ContainerAwareTrait;
 
     /**
      * @var array

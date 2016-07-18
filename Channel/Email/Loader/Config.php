@@ -57,10 +57,11 @@ class Config extends Loader
         $email = new Email();
         $email->setSubject($subject);
         $email->setBody(
-            $this->container->get('templating')->render(
-                $templateContent,
-                $dataBody + $dataBodyAdded
-            )
+            $this->container
+                ->get('templating')->render(
+                    $templateContent,
+                    $dataBody + $dataBodyAdded
+                )
         );
 
         if ($fromEmail) {

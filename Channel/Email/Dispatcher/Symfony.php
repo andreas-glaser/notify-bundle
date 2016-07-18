@@ -18,12 +18,8 @@ class Symfony extends Dispatcher
     /**
      * @inheritdoc
      */
-    public function dispatch(EmailInterface $email = null)
+    protected function doDispatch()
     {
-        if ($email) {
-            $this->setEmail($email);
-        }
-
         if (!$this->email instanceof EmailInterface) {
             throw new DispatcherException('Email not set');
         }

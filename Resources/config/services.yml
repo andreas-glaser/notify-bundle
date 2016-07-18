@@ -6,13 +6,13 @@ parameters:
 services:
 
     andreas_glaser_notify.channel_email.loader:
-      class: %andreas_glaser_notify.channel.email.loader.class%
-      arguments: [@service_container]
+      class: '%andreas_glaser_notify.channel.email.loader.class%'
+      arguments: ['@service_container']
 
     andreas_glaser_notify.channel.email.dispatcher:
-      class: %andreas_glaser_notify.channel.email.dispatcher.class%
-      arguments: [@service_container]
+      class: '%andreas_glaser_notify.channel.email.dispatcher.class%'
+      arguments: ['@service_container']
 
     andreas_glaser_notify.channel.sms.dispatcher:
-      class: %andreas_glaser_notify.channel.sms.dispatcher.class%
-      arguments: [@service_container, @logger]
+      class: '%andreas_glaser_notify.channel.sms.dispatcher.class%'
+      arguments: ['@service_container', '@logger']
