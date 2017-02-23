@@ -1,4 +1,4 @@
 NotifyBundle
 ============
 
-A symfony 2 bundle, helping you to send email, sms and other notifications.
+A symfony bundle, making it easy to send email, sms and other notifications

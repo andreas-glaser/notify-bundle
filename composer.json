@@ -1,13 +1,13 @@
 {
   "name": "andreas-glaser/notify-bundle",
   "type": "symfony-bundle",
-  "description": "A symfony 2 bundle, helping you to send email, sms and other notifications.",
+  "description": "A symfony bundle, making it easy to send email, sms and other notifications",
   "homepage": "https://github.com/andreas-glaser/notify-bundle",
   "license": "MIT",
   "authors": [
     {
       "name": "Andreas Glaser",
-      "email": "andreas.c.glaser@gmail.com"
+      "email": "andreas.glaser@protonmail.com"
     }
   ],
   "require": {
@@ -15,10 +15,18 @@
     "symfony/symfony": "2.8.*",
     "andreas-glaser/php-helpers": "^1.0"
   },
+  "require-dev": {
+    "symfony/phpunit-bridge": "^3.2",
+    "phpunit/phpunit": "@stable",
+    "symfony/var-dumper": "@stable"
+  },
   "autoload": {
     "psr-4": {
       "AndreasGlaser\\NotifyBundle\\": ""
-    }
+    },
+    "exclude-from-classmap": [
+      "Tests/"
+    ]
   },
   "extra": {
     "branch-alias": {
