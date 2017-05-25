@@ -1,3 +1,16 @@
 {% extends _template_layout %}
 {% block subject %}{{ _subject }}{% endblock %}
-{% block content %}{{ _from_name }}<{{ _from_email }}>{% endblock %}
+{% block content %}
+    <table>
+        <tbody>
+        <tr>
+            <th>Subject</th>
+            <td>{{ _subject }}</td>
+        </tr>
+        <tr>
+            <th>From</th>
+            <td>{{ _from_name }}<{{ _from_email }}></td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

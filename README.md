@@ -19,16 +19,19 @@ andreas_glaser_notify:
   enabled: true
   channels:
     email:
-      from_name: "Default From"
-      from_email: my-default-from-email@email.com
-      template_layout: 'AndreasGlaserNotifyBundle:Email:layout.html.html.twig'
+      from_name: "Default Name"
+      from_email: "my-default-from-email@email.com"
 
       emails:
 
         example_email:
-          from_name: "Welcome :name"
-          subject: "This is a test email"
+          subject: Welcome :name"
           template_content: "AppBundle:Email:exampleEmail.html.twig"
+```
+
+Run following console command for a full list of config options.
+```shell
+./app/console config:dump-reference andreas_glaser_notify
 ```
 
 ### Send Email
